@@ -5,6 +5,6 @@ app.get('/', function(req, res) {
     res.send('Hello world');
 });
 
-app.listen(4000, function() {
+app.listen(process.env.PORT, function() {
     console.log('runing');
 })
