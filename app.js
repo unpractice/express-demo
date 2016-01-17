@@ -5,8 +5,10 @@ var app = express();
 app.get('/', function(req, res) {
     res.send('Hello world');
 });
-
-app.get('/webhook', function(req, res) {
+/**
+ * webhook
+ */
+app.post('/webhook', function(req, res) {
     console.log(req.headers);
     console.log(123);
     exec('git pull origin dev');
