@@ -1,3 +1,4 @@
+var exec = require('child_process').exec;
 var express = require('express');
 var app = express();
 
@@ -6,7 +7,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/webhook', function(req, res) {
-    console.log(req);
+    console.log(req.headers);
+    console.log(123);
+    exec('git pull origin dev');
     res.send('webhook');
 });
 
